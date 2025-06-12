@@ -1,3 +1,92 @@
+// Questions - Control Flow Constructs - if, else, else if, loop, while, for break and continue
+
+// Write a program that asks the user for an integer and determines whether it's even or odd.
+use std::io;
+
+fn main() {
+    //
+    println!("Enter a number:");
+
+    //
+    let mut input: String = String::new();
+    io::stdin()
+        .read_line(&mut input)
+        .expect("Error in the value entered!");
+
+    //
+    let num: i32 = input.trim().parse().expect("Error converting data!");
+
+    //
+    if num % 2 == 0 {
+        println!("Num = {}\nEven!", num);
+    } else {
+        println!("Num = {}\nOdd!", num);
+    }
+}
+
+// Create a program that reads a number and prints whether it's positive, negative, or zero.
+use std::io;
+
+fn main() {
+    //
+    println!("Enter a number:");
+
+    //
+    let mut input: String = String::new();
+    io::stdin()
+        .read_line(&mut input)
+        .expect("Error in the value entered!");
+
+    //
+    let num: i8 = input.trim().parse().expect("Error conveting data!");
+
+    //
+    if num > 0 {
+        println!("Number = {}, positive!", num);
+    } else if num < 0 {
+        println!("Number = {}, negative!", num);
+    } else {
+        println!("Number = {}, zero!", num);
+    };
+}
+
+// Develop a program that receives two numbers and shows which one is larger.
+use std::io;
+
+fn main() {
+    //
+    println!("Enter a number A:");
+
+    //
+    let mut input_01: String = String::new();
+    io::stdin()
+        .read_line(&mut input_01)
+        .expect("Error in the value entered!");
+
+    //
+    println!("Enter a number B:");
+
+    //
+    let mut input_02: String = String::new();
+    io::stdin()
+        .read_line(&mut input_02)
+        .expect("Error in the valeu entered!");
+
+    //
+    let num_01: i8 = input_01.trim().parse().expect("Error converting data!");
+    let num_02: i8 = input_02.trim().parse().expect("Error converting data!");
+
+    //
+    if num_01 > num_02 {
+        println!("A: {} > B: {}", num_01, num_02);
+    } else if num_01 < num_02 {
+        println!("B: {} > A: {}", num_02, num_01);
+    } else {
+        println!("A: {} == B: {}", num_01, num_02);
+    }
+}
+
+//
 /*
 
 Escreva um programa que peça um número inteiro ao usuário e determine se ele é par ou ímpar.
