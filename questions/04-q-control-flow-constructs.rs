@@ -89,18 +89,6 @@ fn main() {
 //
 /*
 
-Escreva um programa que peça um número inteiro ao usuário e determine se ele é par ou ímpar.
-Write a program that asks the user for an integer and determines whether it's even or odd.
-
-
-Crie um programa que leia um número e imprima se ele é positivo, negativo ou zero.
-Create a program that reads a number and prints whether it's positive, negative, or zero.
-
-
-Desenvolva um programa que receba dois números e mostre qual deles é o maior.
-Develop a program that receives two numbers and shows which one is larger.
-
-
 Faça um programa que peça uma letra e verifique se ela é uma vogal ou uma consoante.
 Write a program that asks for a letter and checks if it's a vowel or a consonant.
 
