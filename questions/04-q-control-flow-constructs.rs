@@ -86,12 +86,60 @@ fn main() {
     }
 }
 
+// Create a program that receives a student's grade (from 0 to 10) and reports if they passed (grade >= 7), are in recovery (grade >= 5 and < 7), or failed (grade < 5).
+use std::io;
+
+fn main() {
+    //
+    println!("Enter you grade for your first test:");
+    let mut input_test_a: String = String::new();
+    io::stdin()
+        .read_line(&mut input_test_a)
+        .expect("Error entering the first grade!");
+
+    //
+    println!("Enter the grade for your second test:");
+    let mut input_test_b: String = String::new();
+    io::stdin()
+        .read_line(&mut input_test_b)
+        .expect("Error entering the second grade!");
+
+    //
+    println!("Enter the grade for your third test:");
+    let mut input_test_c: String = String::new();
+    io::stdin()
+        .read_line(&mut input_test_c)
+        .expect("Error entering the third test!");
+
+    //
+    let test_a: f32 = input_test_a
+        .trim()
+        .parse()
+        .expect("Error converting Test A!");
+    let test_b: f32 = input_test_b
+        .trim()
+        .parse()
+        .expect("Error converting Test B!");
+    let test_c: f32 = input_test_c
+        .trim()
+        .parse()
+        .expect("Error converting Test C!");
+
+    let ava: f32 = (test_a + test_b + test_c) / 3.;
+
+    //
+    if ava < 5. {
+        println!("You failed!");
+    } else if ava >= 5. && ava < 7. {
+        println!("You are in recovery!");
+    } else {
+        println!("You passed!");
+    }
+}
+//
+//
 //
 /*
-
-Faça um programa que peça uma letra e verifique se ela é uma vogal ou uma consoante.
-Write a program that asks for a letter and checks if it's a vowel or a consonant.
-
 
 Crie um programa que receba a nota de um aluno (de 0 a 10) e informe se ele foi aprovado (nota >= 7), está em recuperação (nota >= 5 e < 7) ou foi reprovado (nota < 5).
 Create a program that receives a student's grade (from 0 to 10) and reports if they passed (grade >= 7), are in recovery (grade >= 5 and < 7), or failed (grade < 5).
